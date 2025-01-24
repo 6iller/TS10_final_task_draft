@@ -1,0 +1,44 @@
+TS10 финальное задание.
+https://62b9e756ff109cd1dc9dae16.mockapi.io/apiv/v1/tours/
+Принятые пошаговые изменения.
+1. C:\web_programming\TS10_all_finished_tasks\travelShopMain\travelShopMain\app\services\modal\modalService.ts
+// Определить типы для метода (возвращающие и для переменных в теле функции)
+-добавлено
+2.C:\web_programming\TS10_all_finished_tasks\travelShopMain\travelShopMain\app\models\tours\index.ts
+- Пустой файл. Но в пункт 1 добавили ссылку на ITours. Поэтому здесь добавили интерфейс ITours.
+3. C:\web_programming\TS10_all_finished_tasks\travelShopMain\travelShopMain\app\services\rest\tours.ts
+// запрос на получение списка туров - Определить типы (возвращающие и для параметров)
+- добавлено + import ITours интерфейса
+4. C:\web_programming\TS10_all_finished_tasks\travelShopMain\travelShopMain\app\services\general\general.ts
+/* Общие методы используются для вставки текста в header   footer*/
+/* -
+    - Указать в методах возвращающие типы, типы для параметров, в теле функции также указать типы
+*/
+-сделано
+5. C:\web_programming\TS10_all_finished_tasks\travelShopMain\travelShopMain\app\services\img\img.ts
+/*- для того чтобы свойство context распозналось Typescript надо установить дополнительно типы (npm i  @types/webpack-env)
+  - метод importAll динамически импортирует файлы картинок и сохраняет их в переменную images*/
+- установлено через терминал: npm i  @types/webpack-env
+лог установки:
+added 69 packages, removed 43 packages, changed 138 packages, and audited 380 packages in 32s
+60 packages are looking for funding
+  run `npm fund` for details
+19 vulnerabilities (3 low, 4 moderate, 10 high, 2 critical)
+To address all issues, run:
+  npm audit fix
+Run `npm audit` for details.
+6. C:\web_programming\TS10_all_finished_tasks\travelShopMain\travelShopMain\app\templates\ticketInfo.ts
+// указать возвращающий тип
+- сделано
+7. C:\web_programming\TS10_all_finished_tasks\travelShopMain\travelShopMain\app\templates\tours.ts
+// указать возвращающий тип и тип для параметра
+- сделано
+8. C:\web_programming\TS10_all_finished_tasks\travelShopMain\travelShopMain\app\services\tickets\ticket.ts
+перенесены из index.ts методы с экспортом initToursDivElements и initTourElemListener
+9.C:\web_programming\TS10_all_finished_tasks\travelShopMain\travelShopMain\app\index.ts
+-добавлен init app, удалены методы п.8 (сделан импорт)
+
+10. C:\Users\aleksandr.sabitov\Downloads\travel_shop comparison\travelShopMain_without_node modules23.01.25\travelShopMain_without_node modules\app\models
+заполнил интефейсы (не все) для тикет, индекс и юзер
+11. C:\Users\aleksandr.sabitov\Downloads\travel_shop comparison\travelShopMain_without_node modules23.01.25\travelShopMain_without_node modules\app\pages\tickets\tickets.ts
+сделан импорт перенесенных функций (проверить путь) и отсюда перенесены функции в C:\Users\aleksandr.sabitov\Downloads\travel_shop comparison\travelShopMain_without_node modules23.01.25\travelShopMain_without_node modules\app\services\tickets\ticket.ts
